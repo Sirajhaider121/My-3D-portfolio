@@ -15,12 +15,12 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Rivera | Creative Developer & 3D Web Engineer",
-  description: "Portfolio of Alex Rivera - Senior Full-Stack Engineer, Creative Technologist, and 3D Web Developer specializing in React, Next.js, Three.js, WebGL, and high-performance applications.",
+  title: "Siraj Haider | Creative Developer",
+  description: "Professional 3D Developer Portfolio of Siraj Haider",
   keywords: ["Developer Portfolio", "Next.js", "React Three Fiber", "Three.js", "Creative Developer", "Tailwind CSS", "Framer Motion", "GSAP"],
-  authors: [{ name: "Alex Rivera" }],
+  authors: [{ name: "Siraj Haider" }],
   openGraph: {
-    title: "Alex Rivera | Creative Developer & 3D Web Engineer",
+    title: "Siraj Haider | Creative Developer & 3D Web Engineer",
     description: "Modern, interactive 3D developer portfolio showcasing cutting-edge web applications, interactive shaders, and full-stack projects.",
     type: "website",
   },
