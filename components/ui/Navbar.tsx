@@ -17,6 +17,20 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    document.body.style.overflow = "auto";
+    
+    setTimeout(() => {
+      const targetId = href.replace("#", "");
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 250);
+  };
+
   const navLinks = [
     { name: "// Home", href: "#home" },
     { name: "// Experience", href: "#experience" },
@@ -127,7 +141,7 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => handleMobileNavClick(e, link.href)}
                   className="py-2 px-3 rounded-lg text-slate-300 hover:text-cyber-cyan hover:bg-white/5 transition-colors flex items-center justify-between cursor-pointer pointer-events-auto"
                 >
                   {link.name}
@@ -142,7 +156,7 @@ export default function Navbar() {
                 </span>
                 <a
                   href="#contact"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => handleMobileNavClick(e, "#contact")}
                   className="px-4 py-2 rounded-lg border border-cyan-400 text-cyan-400 text-xs font-mono hover:bg-cyan-400 hover:text-black hover:font-black hover:shadow-[0_0_25px_rgba(0,240,255,0.8)] transition-all duration-300 flex items-center gap-1.5 cursor-pointer pointer-events-auto"
                 >
                   <Send className="w-3.5 h-3.5" /> Hire Me
