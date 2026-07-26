@@ -53,7 +53,7 @@ export default function Navbar() {
           <a href="#home" className="flex items-center gap-3 group">
             <div className="relative flex items-center justify-center w-10 h-10 group-hover:scale-105 transition-transform">
               <img 
-                src="/profile.jpg" 
+                src="/profile.png" 
                 alt="Siraj Haider" 
                 className="w-9 h-9 rounded-full object-cover border border-cyan-400/50 shadow-[0_0_10px_rgba(0,240,255,0.3)] z-10 bg-[#0d0e17]"
                 onError={(e) => {
