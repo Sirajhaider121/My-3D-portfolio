@@ -105,7 +105,7 @@ export default function HeroSection() {
               className="space-y-3"
             >
               <img 
-                src="/profile.jpg" 
+                src="/profile.png" 
                 alt="Siraj Haider" 
                 className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-cyan-400 shadow-[0_0_20px_rgba(0,240,255,0.4)] mb-4" 
               />
