@@ -27,13 +27,13 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[999] pointer-events-auto transition-all duration-300 ${
         scrolled
-          ? "py-3 bg-[#08090e]/80 backdrop-blur-xl border-b border-white/10 shadow-2xl"
+          ? "py-3 bg-[#08090e]/95 backdrop-blur-2xl border-b border-white/10 shadow-2xl"
           : "py-5 bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto">
         <div className="flex items-center justify-between">
           {/* Brand Logo */}
           <a href="#home" className="flex items-center gap-3 group">
@@ -102,10 +102,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu icon */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex md:hidden items-center gap-2 pointer-events-auto z-[1000]">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl glass-panel text-slate-200 hover:text-cyber-cyan"
+              className="p-2 rounded-xl glass-panel text-slate-200 hover:text-cyber-cyan cursor-pointer pointer-events-auto"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -120,7 +120,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-panel border-b border-white/10 mt-3 px-6 py-5 bg-[#0a0b12]/95 backdrop-blur-2xl"
+            className="md:hidden relative z-[1000] glass-panel border-b border-white/10 mt-3 px-6 py-5 bg-[#0a0b12]/95 backdrop-blur-2xl pointer-events-auto"
           >
             <div className="flex flex-col gap-3 font-mono text-sm">
               {navLinks.map((link) => (
@@ -128,7 +128,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="py-2 px-3 rounded-lg text-slate-300 hover:text-cyber-cyan hover:bg-white/5 transition-colors flex items-center justify-between"
+                  className="py-2 px-3 rounded-lg text-slate-300 hover:text-cyber-cyan hover:bg-white/5 transition-colors flex items-center justify-between cursor-pointer pointer-events-auto"
                 >
                   {link.name}
                   <span className="text-xs text-slate-600">→</span>
@@ -143,7 +143,7 @@ export default function Navbar() {
                 <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-2 rounded-lg border border-cyan-400 text-cyan-400 text-xs font-mono hover:bg-cyan-400 hover:text-black hover:font-black hover:shadow-[0_0_25px_rgba(0,240,255,0.8)] transition-all duration-300 flex items-center gap-1.5"
+                  className="px-4 py-2 rounded-lg border border-cyan-400 text-cyan-400 text-xs font-mono hover:bg-cyan-400 hover:text-black hover:font-black hover:shadow-[0_0_25px_rgba(0,240,255,0.8)] transition-all duration-300 flex items-center gap-1.5 cursor-pointer pointer-events-auto"
                 >
                   <Send className="w-3.5 h-3.5" /> Hire Me
                 </a>
